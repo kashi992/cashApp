@@ -1,0 +1,45 @@
+.topBar {
+    background-color: $primaryColor;
+    height: 50px;
+
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    p {
+        color: $whiteColor;
+        font-weight: 500;
+        animation: topBarText linear 10s infinite;
+        width: 100%;
+        position: absolute;
+        font-weight: 600;
+    }
+
+
+}
+@keyframes topBarText {
+    0%{
+transform: translateX(0);
+    }
+    100%{
+transform: translateX(100%);
+    }
+}
+
+@media screen and (max-width: 1680px) {
+    .topBar {
+        height: 36px;
+    }
+}
+
+@media screen and (max-width: 1370px) {
+    .topBar {
+        height: 30px;
+    }
+}
+
+@media screen and (max-width: 991px) {}
+
+@media screen and (max-width: 575px) {}

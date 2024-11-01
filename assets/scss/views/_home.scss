@@ -1,0 +1,484 @@
+//scroll btn to top start
+.scrollTop {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: $primaryColor;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.6s ease;
+    right: 30px;
+    bottom: 30px;
+    z-index: 9;
+    cursor: pointer;
+    border: 2px solid $secondaryColor;
+    box-shadow: 0 15px 30px rgba(85, 85, 85, 0.16);
+
+    &.scrolled {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    span.chevronTop {
+        position: absolute;
+        top: 20px;
+        left: 15px;
+    }
+}
+
+.chevron {
+    border: 3px solid transparent;
+    width: 20px;
+    height: 20px;
+
+    &.__top {
+        border-left-color: $secondaryColor;
+        border-top-color: $secondaryColor;
+        transform: rotate(45deg) translate(3px, 3px);
+    }
+
+    &.__bottom {
+        border-left-color: $secondaryColor;
+        border-bottom-color: $secondaryColor;
+        transform: rotate(45deg) translate(3px, 3px);
+    }
+
+    &.__left {
+        border-left-color: $secondaryColor;
+        border-bottom-color: $secondaryColor;
+        transform: rotate(45deg) translate(3px, -3px);
+    }
+
+    &.__right {
+        border-right-color: $secondaryColor;
+        border-top-color: $secondaryColor;
+        transform: rotate(45deg) translate(-3px, 3px);
+    }
+}
+
+//scroll btn to top end
+.crossIcon {
+    color: rgba(33, 37, 41, 0.75);
+    font-size: 25px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1;
+
+    i {
+        font-size: inherit;
+    }
+}
+
+.overlay {
+    background-color: rgba($color: #000000, $alpha: 0.5);
+    width: 100vw;
+    height: 1000vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.6s ease;
+    z-index: 3;
+
+    &.__show {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+// hero sec start
+
+.heroWrap {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 1) 0%, rgba(240, 240, 245, 1) 30%, rgba(245, 230, 235, 1) 60%, rgba(220, 225, 240, 1) 100%);
+    height: calc(100vh - 170px);
+
+    .container {
+        height: 100%;
+    }
+
+    .heroInner {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        height: 100%;
+        align-items: center;
+    }
+
+    .heroContent {
+        p {
+            margin-top: 24px;
+            margin-bottom: 40px;
+        }
+    }
+
+    .heroImg {
+        img {
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    .customBtn {
+        background-color: $blackColor;
+        border-color: $blackColor;
+
+        &:hover {
+            background-color: unset;
+            color: $blackColor;
+        }
+    }
+}
+
+// hero sec end
+
+// benefit sec start
+.benefitWrap {
+    .container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+    }
+
+    .benefitBox {
+        padding: 60px 20px;
+        background: $primaryColor;
+        border-radius: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+
+        img {
+            width: 100px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        h3 {
+            color: $whiteColor;
+            font-size: var(--fs30);
+            font-weight: 600;
+        }
+    }
+}
+
+// benefit sec end
+
+// about sec start
+.rewardWrap {
+    position: relative;
+    z-index: 1;
+
+    .container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+    }
+
+    h2 {
+        margin-bottom: 30px;
+    }
+
+    p {
+        line-height: 1.5;
+    }
+
+    .rewardBox {
+        background: linear-gradient(135deg, $primaryColor, $blackColor);
+        border-radius: 20px;
+        padding: 50px;
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+        text-align: center;
+        max-width: fit-content;
+        margin-left: auto;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        color: $whiteColor;
+
+        .icon-container {
+            background-color: $blackColor;
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            box-shadow: 0 0 10px rgba(0, 214, 79, 0.5);
+        }
+
+        .reward-icon {
+            font-size: 40px;
+            color: #00D64F;
+        }
+
+        .reward-amount {
+            font-size: var(--fs40);
+            font-weight: 700;
+        }
+
+        .reward-details {
+            font-size: var(--fs22);
+            line-height: 1.5;
+            font-weight: 500;
+        }
+
+        .reward-details .highlight {
+            color: $primaryColor;
+            font-weight: 700;
+        }
+
+        .customBtn {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0, 214, 79, 0.4);
+        }
+
+    }
+
+    .aboutInner {
+        p {
+            margin-top: 16px;
+            line-height: 1.5;
+
+            &:first-of-type {
+                margin-top: 35px;
+            }
+        }
+
+        h3 {
+            margin-top: 40px;
+            margin-bottom: 16px;
+        }
+
+        li {
+            padding-left: 25px;
+            position: relative;
+
+            .tickIcon {
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+        }
+
+        ul {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            gap: 16px;
+        }
+    }
+}
+
+// about sec end
+
+// why choose us sec end
+.chooseImg {
+    width: calc(50% - 15px);
+    height: 630px;
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.chooseContent {
+    width: calc(50% - 15px);
+
+    p {
+        margin-top: 30px;
+        margin-bottom: 40px;
+    }
+
+    span {
+        display: inline-block;
+    }
+
+    li {
+        display: grid;
+        gap: 10px 20px;
+        align-items: center;
+        grid-template-columns: 20px calc(100% - 40px);
+        margin-bottom: 40px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        span {
+            line-height: 1.5;
+            grid-column: 2;
+        }
+
+        i {
+            font-size: 22px;
+            color: $primaryColor;
+        }
+    }
+
+    h4 {
+        width: 100%;
+    }
+}
+
+// why choose us sec end
+.titleDot {
+    width: fit-content;
+    padding-bottom: 15px;
+    position: relative;
+
+    &::before {
+        content: "";
+        background-color: $secondaryColor;
+        left: 50%;
+        transform: translate(-50%, 50%);
+        position: absolute;
+        width: 80%;
+        height: 2px;
+        bottom: 0;
+    }
+
+    &::after {
+        content: "";
+        background-color: $secondaryColor;
+        left: 50%;
+        transform: translate(-50%, 50%);
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        border: 4px solid $whiteColor;
+        border-radius: 50%;
+        bottom: 0;
+    }
+
+}
+
+// testimonail sec end
+.testimonailWrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    .rating {
+        font-size: 40px;
+        color: $primaryColor;
+    }
+
+    .testimonialImg {
+        width: 100%;
+        height: 100%;
+
+        img {
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    h2 {
+        font-size: var(--fs50);
+        margin-bottom: 10px;
+    }
+
+    .titleDot::before {
+        background-color: $primaryColor;
+    }
+
+    .titleDot::after {
+        background-color: $primaryColor;
+    }
+
+    .testimonialContent {
+        width: 100%;
+        overflow: hidden;
+        padding: 40px 20px;
+        text-align: center;
+
+        p {
+            font-weight: 500;
+        }
+    }
+
+    .titleDot img {
+        width: 48px;
+    }
+
+    .tesimonialBox {
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 40px;
+        gap: 15px;
+        padding: 0 15px;
+
+        p {
+            font-size: var(--fs22);
+        }
+
+        .profileIcon {
+            width: 62px;
+            border-radius: 50%;
+            margin-top: 20px;
+            margin-bottom: 16px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        h3 {
+            font-size: var(--fs22);
+            font-weight: 700;
+        }
+    }
+
+    .slick-dots {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 40px;
+
+        li {
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background-color: $blackColor;
+            border: 1px solid $secondaryColor;
+            cursor: pointer;
+
+            button {
+                font-size: 0;
+                border: 0;
+                width: 100%;
+                height: 100%;
+                padding: 0;
+                background: unset;
+                margin: 0;
+                display: flex;
+            }
+
+            &.slick-active {
+                background-color: $primaryColor;
+                border-color: $primaryColor;
+            }
+        }
+    }
+}
+
+.review-cta {
+    font-weight: 500;
+    margin-top: 50px;
+    text-align: center;
+}
+
+// testimonail sec end

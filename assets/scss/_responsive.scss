@@ -1,0 +1,61 @@
+@media screen and (max-width: 1680px) {
+    .customBtn {
+        padding: 18px 30px;
+        border-radius: 10px;
+    }
+
+    .chevron {
+        width: 16px;
+        height: 16px;
+    }
+}
+
+@media screen and (max-width: 1570px) {
+
+}
+
+@media screen and (max-width: 1500px) {
+
+}
+
+@media screen and (max-width: 1370px) {
+    .customBtn {
+        padding: 14px 20px;
+        border-width: 1px;
+        font-size: 16px;
+    }
+
+    .chevron {
+        width: 13px;
+        height: 13px;
+    }
+    .chevron.__left {
+        transform: rotate(45deg) translate(1px, -1px);
+    }
+    .chevron.__right {
+        transform: rotate(45deg) translate(-2px, 2px);
+    }
+}
+
+// Ipad pro 
+// `xl` applies to large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) {
+}
+
+//  ipad 
+
+// `lg` applies to medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) {
+   
+}
+
+//  mobile 
+// `sm` applies to x-small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {
+    .scrollTop {
+        width: 40px;
+        height: 40px;
+        right: 20px;
+        bottom: 20px;
+    }
+}
