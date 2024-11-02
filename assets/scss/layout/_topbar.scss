@@ -1,6 +1,8 @@
 .topBar {
     background-color: $primaryColor;
     height: 50px;
+    overflow: hidden;
+    position: relative;
 
     .container {
         display: flex;

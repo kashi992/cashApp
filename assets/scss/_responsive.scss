@@ -8,14 +8,40 @@
         width: 16px;
         height: 16px;
     }
+
+    .heroWrap {
+        height: calc(100vh - 136px);
+    }
+
+    .benefitWrap .benefitBox img {
+        width: 85px;
+    }
+
+    .featureCards .featureCard img {
+        width: 100px;
+    }
+
+    .featureCards .featureCard p {
+        font-size: 26px;
+    }
 }
 
 @media screen and (max-width: 1570px) {
+    .heroWrap {
+        height: calc(100vh - 121px);
+    }
 
 }
 
 @media screen and (max-width: 1500px) {
+    .featureCards .featureCard {
+        padding: 40px 24px;
+        gap: 24px;
+    }
 
+    .featureCards .featureCard img {
+        width: 85px;
+    }
 }
 
 @media screen and (max-width: 1370px) {
@@ -29,24 +55,75 @@
         width: 13px;
         height: 13px;
     }
+
     .chevron.__left {
         transform: rotate(45deg) translate(1px, -1px);
     }
+
     .chevron.__right {
         transform: rotate(45deg) translate(-2px, 2px);
+    }
+    .heroWrap {
+        height: calc(100vh - 105px);
+    }
+    .rewardWrap h2 {
+        margin-bottom: 10px;
+    }
+    .featureCards .featureCard h3 {
+        font-size: 40px;
+    }
+    .featureCards .featureCard {
+        padding: 30px 20px;
+        gap: 18px;
+    }
+    .featureCards .featureCard p {
+        font-size: 22px;
+    }
+    .testimonailWrap .testimonialImg img {
+        object-fit: contain;
     }
 }
 
 // Ipad pro 
 // `xl` applies to large devices (desktops, less than 1200px)
 @media (max-width: 1199.98px) {
+    .heroWrap .heroInner {
+        grid-template-columns: 1fr;
+    }
+    .benefitWrap .container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    .benefitWrap .benefitBox {
+        padding: 40px 16px;
+        border-radius: 16px;
+    }
 }
 
 //  ipad 
 
 // `lg` applies to medium devices (tablets, less than 992px)
 @media (max-width: 991.98px) {
-   
+    .rewardWrap .container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .rewardWrap .rewardBox{
+        margin-left: auto;margin-right: auto;
+    }
+    .testimonailWrap {
+   display: flex;
+   flex-direction: column-reverse;
+        gap: 16px;
+    }
+    .featureCards .container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .heroWrap .heroContent p {
+        margin-top: 15px;
+        margin-bottom: 30px;
+    }
 }
 
 //  mobile 
@@ -57,5 +134,47 @@
         height: 40px;
         right: 20px;
         bottom: 20px;
+    }
+    .customBtn {
+        padding: 12px 15px;
+        font-size: 14px;
+        border-radius: 6px;
+    }
+    .heroWrap .heroInner {
+        gap: 16px;
+    }
+    .heroWrap {
+        height: auto;
+    }
+    .benefitWrap .container {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    .rewardWrap .rewardBox .icon-container {
+        width: 85px;
+        height: 85px;
+    }
+    .rewardWrap .rewardBox {
+        border-radius: 16px;
+        padding: 20px;
+        gap: 16px;
+    }
+    .rewardWrap .rewardBox .reward-icon {
+        font-size: 32px;
+    }
+    .testimonailWrap .testimonialContent {
+        padding: 0;
+    }
+    .testimonailWrap {
+        gap: 40px;
+    }
+    .featureCards .featureCard img {
+        width: 70px;
+    }
+    .featureCards .featureCard h3 {
+        font-size: 36px;
+    }
+    .featureCards .featureCard p {
+        font-size: 18px;
     }
 }
