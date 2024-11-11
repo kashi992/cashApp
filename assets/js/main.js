@@ -46,31 +46,40 @@ $(document).ready(function () {
     // Default URL for users in countries not listed above
     const fallbackUrl = '#';
 
-    // Function to get the user's country and redirect
-    function getLocationAndRedirect() {
+    // Function to get the user's country and determine the redirect URL
+    function getRedirectUrl(callback) {
         $.ajax({
             url: 'https://ipinfo.io/json?token=5758f9a74a20ff', // Replace with your actual token
             dataType: 'json',
             success: function (data) {
                 const country = data.country;
                 const redirectUrl = geoRedirectUrls[country] || fallbackUrl;
-                console.log("Redirecting to:", redirectUrl); // Log the URL
-                if (redirectUrl !== '#') { // Ensure it only redirects to valid URLs
-                    window.open(redirectUrl, '_blank');
-                }
+                console.log("Determined redirect URL:", redirectUrl); // Log the URL
+                callback(redirectUrl); // Pass the redirect URL to the callback function
             },
             error: function () {
                 console.error("Geolocation error");
                 console.log("Redirecting to fallback URL:", fallbackUrl);
+                callback(fallbackUrl); // Use fallback URL in case of an error
             }
         });
     }
 
     // Attach the geo-redirect function to buttons with the class "geoRedirectButton"
     $(document).on('click', '.geoRedirectButton', function () {
-        getLocationAndRedirect();
+        getRedirectUrl(function (redirectUrl) {
+            if (redirectUrl !== '#') {
+                // Use window.location.href to ensure compatibility with Safari
+                setTimeout(function () {
+                    window.location.href = redirectUrl;
+                }, 100); // Small delay to ensure the click event is completed
+            } else {
+                console.log("No valid redirect URL found");
+            }
+        });
     });
 
     // geo script end
+
 });
 
