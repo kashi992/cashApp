@@ -91,8 +91,13 @@
 // Ipad pro 
 // `xl` applies to large devices (desktops, less than 1200px)
 @media (max-width: 1199.98px) {
+    .benefitWrap .benefitBox h3 {
+        min-height: auto;
+    }
     .heroWrap .heroInner {
         grid-template-columns: 1fr;
+        align-content: center;
+        gap: 30px;
     }
     .benefitWrap .container {
         grid-template-columns: repeat(2, 1fr);
@@ -108,6 +113,10 @@
 
 // `lg` applies to medium devices (tablets, less than 992px)
 @media (max-width: 991.98px) {
+    .testimonailWrap .testimonialImg {
+        height: 450px;
+    }
+    
     .rewardWrap .container {
         grid-template-columns: 1fr;
         gap: 20px;
@@ -180,5 +189,12 @@
     }
     .featureCards .featureCard p {
         font-size: 18px;
+    }
+    .testimonailWrap .testimonialImg {
+        height: 330px;
+    }
+    .topBar p {
+        text-wrap: nowrap;
+        font-size: 13px;
     }
 }

@@ -37,14 +37,14 @@ $(document).ready(function () {
     // geo script start
     // Define the redirection URLs for each country
     const geoRedirectUrls = {
-        'US': 'https://rewarrdsgiant.com/aff_c?offer_id=1163&aff_id=11492', // URL for users in the USA
-        'GB': 'https://rewarrdsgiant.com/aff_c?offer_id=1017&aff_id=11492', // URL for users in the UK
-        'CA': 'https://rewarrdsgiant.com/aff_c?offer_id=1017&aff_id=11492', // URL for users in Canada
-        'AU': 'https://rewarrdsgiant.com/aff_c?offer_id=74&aff_id=11492' // URL for users in Australia
+        'US': 'https://glstrck.com/aff_c?offer_id=1163&aff_id=11492&source=cash+app+organic', // URL for users in the USA
+        'GB': 'https://glstrck.com/aff_c?offer_id=1145&aff_id=11492', // URL for users in the UK
+        'CA': 'https://glstrck.com/aff_c?offer_id=1017&aff_id=11492', // URL for users in Canada
+        'AU': 'https://glstrck.com/aff_c?offer_id=1145&aff_id=11492' // URL for users in Australia
     };
 
     // Default URL for users in countries not listed above
-    const fallbackUrl = '#';
+    const fallbackUrl = 'https://codeunlocked.vip/cl/i/wol712';
 
     // Function to get the user's country and determine the redirect URL
     function getRedirectUrl(callback) {

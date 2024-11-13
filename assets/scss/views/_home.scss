@@ -120,6 +120,7 @@
         img {
             height: 100%;
             width: 100%;
+            border-radius: 10px;
         }
     }
 
@@ -141,16 +142,16 @@
     .container {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        gap: 30px;
+        gap: 20px;
     }
 
     .benefitBox {
         padding: 60px 20px;
         background: $primaryColor;
-        border-radius: 30px;
+        border-radius: 15px;
         display: flex;
         flex-direction: column;
-        gap: 20px;
+        gap: 16px;
         text-align: center;
 
         img {
@@ -163,6 +164,15 @@
             color: $whiteColor;
             font-size: var(--fs30);
             font-weight: 600;
+            min-height: 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        p{
+            color: $whiteColor;
+            font-size: var(--fs22);
         }
     }
 }
@@ -370,7 +380,7 @@
 .testimonailWrap {
     display: grid;
     align-items: center;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 450px 1fr;
 
     .rating {
         font-size: 40px;
